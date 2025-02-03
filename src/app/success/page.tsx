@@ -1,5 +1,5 @@
 'use client';
 
 export default function SuccessPage() {
-  return <p>SuccessPage</p>;
+  return <p>Please check your email to confirm your signup</p>;
 }
