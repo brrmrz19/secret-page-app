@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -18,6 +19,7 @@ export default function LoginPage() {
   const [activeTab, setActiveTab] = useState('loginTab');
 
   return (
+    // <ProtectedRoute>
     <div className="flex justify-center h-screen items-center">
       <div>
         <h1 className="flex justify-center pb-10 font-bold text-4xl">
@@ -99,6 +101,26 @@ export default function LoginPage() {
                 <form action={signup}>
                   <div className="flex flex-col gap-6">
                     <div className="grid gap-2">
+                      <Label htmlFor="register-first-name">First Name</Label>
+                      <Input
+                        id="register-first-name"
+                        name="first_name"
+                        type="text"
+                        placeholder="Your First Name"
+                        required
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="register-last-name">Last Name</Label>
+                      <Input
+                        id="register-last-name"
+                        name="last_name"
+                        type="text"
+                        placeholder="Your Last Name"
+                        required
+                      />
+                    </div>
+                    <div className="grid gap-2">
                       <Label htmlFor="register-email">Email</Label>
                       <Input
                         id="register-email"
@@ -128,5 +150,6 @@ export default function LoginPage() {
         </Tabs>
       </div>
     </div>
+    // </ProtectedRoute>
   );
 }
